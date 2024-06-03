@@ -6,4 +6,6 @@ Second homework /week3/homework_week3.ipynb (complete)
 
 Third homework /week4/homeworkweek4.ipynb (complete)
 
-Forth homework /week5/homework_week5.ipynb (draft)
+Forth homework /week5/homework_week5.ipynb (complete)
+
+Final project /CHEM101.6/final_proj/analysis/anaylsis.ipynb (complete)

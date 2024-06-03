@@ -5,3 +5,11 @@
 /final_proj/cd
 /final_proj/cd-ad
 /final_proj/test
+/final_proj/complex_integration
+/final_proj/complex_integration_meoh/lambda.*
+/final_proj/complex_integration_meoh_out/lambda.*
+/final_proj/complex_integration_trial
+/final_proj/ligand_integration_meoh/lambda.*
+/final_proj/ligand_integration
+/final_proj/ligand_integration_trial
+/final_proj/ligand_integration_trial

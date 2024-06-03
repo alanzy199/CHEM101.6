@@ -1,0 +1,37 @@
+; Topology generated using molcal v1.0  
+; For use with CGenFF force-field version 4.1
+;
+; Include forcefield parameters
+#include "./charmm36.ff/forcefield.itp"
+;
+; Include ligand specific parameters
+#include "./charmm36.ff/ADH_ffbonded.itp"
+#include "ADH.itp"
+
+; Include Position restraint file
+#ifdef POSRES
+#include "posre_adh.itp"
+#endif
+
+; Include water topology
+#include "amber99sb-ildn.ff/tip3p.itp"
+
+#ifdef POSRES_WATER
+; Position restraint for each water oxygen
+[ position_restraints ]
+;  i funct       fcx        fcy        fcz
+   1    1       1000       1000       1000
+#endif
+
+[ system ]
+; Name
+ligand in water
+
+[ molecules ]
+; Compound #mols
+ADH   1
+
+
+
+
+

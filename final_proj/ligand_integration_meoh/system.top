@@ -1,0 +1,28 @@
+; Topology generated using molcal v1.0  
+; For use with CGenFF force-field version 4.1
+;
+; Include forcefield parameters
+#include "./charmm36.ff/forcefield.itp"
+;
+; Include ligand specific parameters
+#include "./charmm36.ff/ADM_ffbonded.itp"
+#include "ADMEOH.itp"
+
+; Include water topology
+#include "amber99sb-ildn.ff/tip3p.itp"
+
+#ifdef POSRES_WATER
+; Position restraint for each water oxygen
+[ position_restraints ]
+;  i funct       fcx        fcy        fcz
+   1    1       1000       1000       1000
+#endif
+
+[ system ]
+; Name
+ligand in water
+
+[ molecules ]
+; Compound #mols
+ADMEOH   1
+SOL               873

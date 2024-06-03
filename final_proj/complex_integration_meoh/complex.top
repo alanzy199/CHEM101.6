@@ -1,0 +1,47 @@
+; include custom forcefield parameters
+#include "./charmm36.ff/forcefield.itp"
+#include "./charmm36.ff/CD-_ffbonded.itp"
+#include "CD.itp"
+#include "ADM.itp"
+
+
+; Include water topology
+#include "./charmm36.ff/tip3p.itp"
+
+#ifdef POSRES_WATER
+; Position restraint for each water oxygen
+[ position_restraints ]
+;  i funct       fcx        fcy        fcz
+   1    1       1000       1000       1000
+#endif
+
+
+
+[ system ]
+; Name
+complex in water
+
+[ molecules ]
+; Compound #mols
+CD    1
+ADM    1
+SOL              6970
+
+
+[ intermolecular_interactions ]
+[ bonds ]
+; ai     aj    type   bA      kA     bB      kB
+ 149   48       6    0.352   0.0    0.352   4184.0
+
+[ angles ]
+; ai     aj    ak     type    thA      fcA        thB      fcB
+ 150  149   48     1       93.15     0.0        93.15     41.84
+ 149  48     114   1       106.38     0.0        106.38     41.84
+
+[ dihedrals ]
+; ai     aj    ak    al    type     thA      fcA       thB      fcB
+ 153  150   149   48      2       159.87    0.0    159.87    41.84
+ 150  149   48     114    2       53.55    0.0    53.55    41.84
+ 149  48     114   112    2       47.57    0.0    47.57    41.84
+
+
